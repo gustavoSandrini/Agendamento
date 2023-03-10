@@ -1,0 +1,13 @@
+<h1>Detalhes da Consulta</h1>
+<hr>
+<h3>Nome do Paciente: <%= appo.name %></h3>
+<h3>Email: <%= appo.email %></h3>
+<h3>CPF: <%= appo.cpf %></h3>
+<h3>Descrição da consulta: <%= appo.description %></h3>
+<hr>
+<% if(!appo.finnished){ %>
+    <form action="/finish" method="POST">
+        <input type="hidden" name="id" value="<%= appo._id %>">
+<button>Finalizar consulta</button>
+</form>
+<% } %>

@@ -1,0 +1,16 @@
+<h3> Historico de consultas: </h3>
+<hr>
+<form action="/resultadodabusca" method="get">
+    <input type="search" name="search" id="search" placeholder="Digite o CPF ou Email" class="form-control"> 
+    <button>Pesquisar</button>
+</form>
+<hr>
+<% appos.forEach(appo => { %>
+
+<h3>Nome do Paciente: <%= appo.name %></h3>
+<h3>Email: <%= appo.email %></h3>
+<h3>CPF: <%= appo.cpf %></h3>
+<h3>Descrição da consulta: <%= appo.description %></h3>
+<hr>
+
+<% }) %>
